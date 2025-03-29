@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
-const MovieCard = ({movie: {title, vote_average, poster_path, release_date, original_language}}) => {
-  return (
+const MovieCard = ({
+	movie: { title, vote_average, poster_path, release_date, original_language },
+}) => {
+	return (
 		<div className="movie-card">
 			<img
 				src={
@@ -25,11 +27,13 @@ const MovieCard = ({movie: {title, vote_average, poster_path, release_date, orig
 					<p className="lang">{original_language}</p>
 
 					<span>•</span>
-					<p className="year">{release_date ? release_date.split('-')[0] : 'N/A'}</p>
+					<p className="year">
+						{release_date ? release_date.split("-")[0] : "N/A"}
+					</p>
 				</div>
 			</div>
 		</div>
 	);
-}
+};
 
-export default MovieCard
+export default MovieCard;
